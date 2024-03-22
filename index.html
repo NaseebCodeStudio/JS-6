@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="NCS.png" type="image/x-icon">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      background: #e3edf7;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      border: 2px solid red;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 20px;
+      background-image: url(NCS.png);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .drop {
+      margin: 50px auto;
+      max-width: 600px;
+    }
+
+    .drop li {
+      list-style: none;
+      width: 100%;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #e3edf7;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+    }
+
+    .drop li label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    label::before {
+      content: "+";
+      margin-right: 10px;
+      font-size: 24px;
+      font-weight: bolder;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .drop .content {
+      text-align: justify;
+      color: #555;
+      padding: 0 10px;
+      line-height: 26px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s, padding 0.5s;
+    }
+
+    .drop input[type="radio"]:checked+label+.content {
+      max-height: 400px;
+      padding: 10px 10px 20px;
+      overflow: auto;
+    }
+
+    .drop input[type="radio"]:checked+label::before {
+      content: "-";
+    }
+
+    @media (max-width: 360px) {
+      .drop {
+        margin: 50px auto;
+        max-width: 360px;
+      }
+    }
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- icon right  -->
+  <a href="https://www.youtube.com/@NaseebCodeStudio" target="_blank">
+    <div class="icon"></div>
+  </a>
+  <!-- ==================first drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="first1" />
+      <label for="first1">Operators</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <b>Operators</b> are used along with variables/Constant to create expressions, these are expressions are used
+          to create logics and alogirthms.
+          <br>
+          Operators in <b>programming are symbols</b> or keywords that perform operations on one or more values, called
+          operands, to produce a result. They are like the building blocks that allow us to perform various tasks and
+          calculations in our code.
+          <br>
+          An algorithm is like a recipe for solving a specific problem. Just as a recipe guides you through a series of
+          well-defined steps to create a delicious dish, an algorithm provides instructions for a computer to achieve a
+          particular goal. Here are the key points:
+          <br>
+          <b>Sequence of Instructions:</b> An algorithm is a sequence of instructions that a computer follows. These
+          instructions tell the computer what to do and how to do it. <br>
+          <b>Well-Defined Problem:</b> Algorithms are designed to solve well-defined problems. This means the problem
+          has clear boundaries, and we know exactly what we want to achieve. <br>
+          <b>Consistent Outcomes:</b> Similar to how a recipe produces the same tasty result every time, algorithms
+          ensure consistent and reliable outcomes in the digital world. <br>
+          <hr>
+          <b>Everyday Examples:</b> <br>
+          <b>Search Engines:</b> When you search for something online, the search engine uses an algorithm to find and
+          present relevant results quickly. <br>
+          <b>Social Media Feeds:</b> Algorithms prioritize the content you see in your social media feed based on
+          factors like your past behavior and post popularity. <br>
+          <b>Navigation Apps:</b> Algorithms determine the most efficient route for you to reach your destination.
+          <hr>
+          Remember, algorithms are like the secret sauce that makes computers smart and efficient!
+          <!-- --p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================first drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="first" />
+      <label for="first">Types of Operators</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <b>There are Seven types of Opeartors in JS:</b><br>
+          <b>1.</b>Arithmetic Operators <br>
+          <b>2.</b>Assignment Operators<br>
+          <b>3.</b>Comparison Operators<br>
+          <b>4.</b>String Operators<br>
+          <b>5.</b>Logical Operators<br>
+          <b>6.</b>Bitwise Operators<br>
+          <b>7.</b>Ternary Operator<br>
+          <b>8.</b>Unary Operator<br>
+          <!-- --p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <!-- ==================second drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="second" />
+      <label for="second" style="text-transform: capitalize">Arithmetic, Assignment, Comparison, String</label>
+      <div class="content">
+        <p>
+          <!-- -- p --  -->
+          <b style="font-size: 1.2rem;">Arithmetic</b>
+          <br>
+          - Arithmetic operators in JavaScript are symbols used to perform basic mathematical operations on numbers. <br>
+          (+,-,/,*,%,**) <br>
+          Here's a simple explanation with examples:
+          <br>
+          <b>Addition (+):</b>
+          Adds two numbers together.
+          <br>
+          <b style="color: red;">Example:</b> let sum = 5 + 3; // sum will be 8 <br>
+          <b>Subtraction (-):</b>
+
+          Subtracts the second number from the first.
+          <br>
+          <b style="color: red;">Example:</b> let difference = 10 - 4; // difference will be 6
+          <br>
+          <b>Multiplication (*):</b>
+
+          Multiplies two numbers.
+          <br>
+          <b style="color: red;">Example:</b> let product = 3 * 7; // product will be 21
+          <br>
+          <b>Division (/):</b>
+
+          Divides the first number by the second.
+          <br>
+          <b style="color: red;">Example:</b> let quotient = 20 / 5; // quotient will be 4
+          <br>
+          <b>Modulus (%):</b>
+
+          Returns the remainder when the first number is divided by the second.
+          <br>
+          <b style="color: red;">Example:</b> let remainder = 15 % 4; // remainder will be 3 <br>
+          <b>Exponentiation (**):</b>
+
+          Returns the power of the first number.
+          <br>
+          <b style="color: red;">Example:</b> let remainder = 3 ** 2; // Exponentiation will be 9 <br>
+          <span style="color: blue;">
+            These operators are fundamental for performing calculations in JavaScript, whether you're working with
+            numbers directly or using variables that store numeric values.
+          </span>
+          <br>
+          <hr>
+          <b style="font-size: 1.2rem;">Assignment</b>
+          <br>
+          - Assignment operators in JavaScript are symbols used to <b>assign values to variables and modify</b> the
+          values of variables. Here's a simple explanation with examples:
+          <br>
+          (=,+=,-=,*=,/=,**=,%=)
+          <br>
+          <b>Assignment (=):</b>
+          Assigns a value to a variable.
+          <br>
+          <b style="color: red;">Example:</b> let x = 10; // Assigns the value 10 to the variable x
+          <br>
+          <b>Addition Assignment (+=):</b>
+
+          Adds a value to the current value of a variable and assigns the result back to the variable.
+          <br>
+          <b style="color: red;">Example:</b> let y = 5; y += 3; // Adds 3 to the current value of y (5 + 3) and assigns
+          the result (8) back to y
+          <br>
+          <b>Subtraction Assignment (-=):</b>
+          <br>
+          Subtracts a value from the current value of a variable and assigns the result back to the variable.
+          <br>
+          <b style="color: red;">Example:</b> let z = 10; z -= 2; // Subtracts 2 from the current value of z (10 - 2)
+          and assigns the result (8) back to z <br>
+          <b>Multiplication Assignment (*=):</b>
+
+          Multiplies the current value of a variable by a value and assigns the result back to the variable.
+          <br>
+          <b style="color: red;">Example:</b> let a = 3; a *= 4; // Multiplies the current value of a (3) by 4 and
+          assigns the result (12) back to a <br>
+          <b>Division Assignment (/=):</b>
+
+          Divides the current value of a variable by a value and assigns the result back to the variable.
+          <br>
+          <b style="color: red;">Example:</b> let b = 20; b /= 5; // Divides the current value of b (20) by 5 and
+          assigns the result (4) back to b <br>
+          <b>Modulus Assignment (%=):</b>
+
+          Calculates the remainder when dividing the current value of a variable by a value and assigns the result back
+          to the variable.
+          <br>
+          <b style="color: red;">Example:</b> let c = 15; c %= 4; // Calculates the remainder when dividing the current
+          value of c (15) by 4 and assigns the result (3) back to c
+          <br>
+          <span style="color: blue;">
+            These operators are useful for updating the values of variables based on calculations or other operations in
+            JavaScript.
+          </span>
+          <br>
+          <hr>
+          <b style="font-size: 1.2rem;">Comparison</b>
+          <br>
+          - Comparison operators in JavaScript are symbols used <b>to compare two values and return a Boolean result</b>
+          (true or false) based on the comparison. Here's a simple explanation with examples:
+         <br>
+          (&lt;,>,==, &lt;=,>=,===,!==,!=)
+          <br>
+          <b>Equal to (==):</b>
+
+          Compares two values to check if they are equal.
+          <br>
+          <b style="color: red;">Example:</b> 5 == 5 // Returns true because 5 is equal to 5
+          <br>
+          <b>Not equal to (!=):</b>
+
+          Compares two values to check if they are not equal.
+          <br>
+          <b style="color: red;">Example:</b> 5 != 3 // Returns true because 5 is not equal to 3
+          <br>
+          <b>Strict equal to (===):</b>
+          Compares two values to check if they are strictly equal in value and type.
+          <br>
+          <b style="color: red;">Example:</b> '5' === 5 // Returns false because the string '5' is not strictly equal to
+          the number 5
+          <br>
+          <b>Strict not equal to (!==):</b>
+
+          Compares two values to check if they are not strictly equal in value or type.
+          <br>
+          <b style="color: red;">Example:</b> '5' !== 5 // Returns true because the string '5' is not strictly equal to
+          the number 5
+          <br>
+          <b>Greater than (>):</b>
+
+          Checks if the first value is greater than the second value.
+          <br>
+          <b style="color: red;">Example:</b> 10 > 5 // Returns true because 10 is greater than 5 <br>
+          <b>Less than (&lt;):</b>
+
+          Checks if the first value is less than the second value.
+          <br>
+          <b style="color: red;">Example:</b> 3 &lt; 8 // Returns true because 3 is less than 8
+          <br>
+          <b>Greater than or equal to (>=):</b>
+
+          Checks if the first value is greater than or equal to the second value.
+          <br>
+          <b style="color: red;">Example:</b> 8 >= 8 // Returns true because 8 is equal to 8
+          <br>
+          <b>Less than or equal to (&lt;=):</b>
+
+          Checks if the first value is less than or equal to the second value.
+          <br>
+          <b style="color: red;">Example:</b> 5 &lt;= 3 // Returns false because 5 is not less than or equal to 3
+          <br>
+          <span style="color:blue">
+
+            These operators are essential for comparing values and controlling the flow of execution in JavaScript
+            programs.
+          </span>
+          <br>
+          <hr>
+          <b style="font-size: 1.2rem;">String</b>
+          <br>
+          - There is no such thing as "string operators" in JavaScript. However, there are various operations that can
+          be performed on <b>strings using methods and operators.</b> Here are some common operations related to strings
+          in JavaScript:
+          <br>
+          <b>Concatenation (+):</b>
+
+          Combines two or more strings together.
+          <br>
+          <b style="color: red;">Example:</b> let fullName = firstName + ' ' + lastName;
+          <br>
+          <b>String Length Property (length):</b>
+
+          Returns the length of a string.
+          <br>
+          <b style="color: red;">Example:</b> let messageLength = message.length;
+          <br>
+          <b>Accessing Characters (Bracket Notation or charAt()):</b>
+
+          Allows you to access individual characters in a string.
+          <br>
+          <b style="color: red;">Example:</b> let firstChar = str[0]; or let firstChar = str.charAt(0);
+          <br>
+          <b>Substring (substring()):</b>
+
+          <b>Extracts a portion of a string.</b>
+          <br>
+          <b style="color: red;">Example:</b> let subStr = str.substring(startIndex, endIndex);
+          <br>
+          <b>String Methods:</b>
+          <br>
+          <span style="color: blue;">
+
+            - JavaScript provides numerous built-in methods for manipulating strings, such as toUpperCase(),
+            toLowerCase(), indexOf(), lastIndexOf(), slice(), split(), replace(), and many more. <br>
+            - These are some of the common operations you can perform on strings in JavaScript. They allow you to
+            manipulate and work with textual data effectively in your programs.
+          </span>
+          <br>
+          <!-- -- p --  -->
+        </p>
+      </div>
+    </li>
+  </ul>
+  <!-- ==================third drop================== -->
+  <ul class="drop">
+    <li>
+      <input type="radio" name="drop" id="third" />
+      <label for="third">Logical, Bitwise, Ternary, Unary</label>
+      <div class="content">
+        <p>
+          <!-- --p-- -->
+          <b style="font-size: 1.2rem;">Logical</b>
+          <br>
+          - Logical operators in JavaScript are used to combine or manipulate Boolean values. Here are the main logical
+          operators along with their explanations:
+<br>
+(&&,||,!)
+          <br>
+          <b>Logical AND (&&):</b>
+
+          Returns true if both operands are true; otherwise, it returns false.
+          <br>
+          <b style="color: red;">Example:</b> true && true returns true, but true && false or false && false returns
+          false. <br>
+          <b> Logical OR (||):</b>
+
+          Returns true if at least one of the operands is true; returns false if both operands are false. <br>
+          <b style="color: red;">Example:</b> true || false returns true, but false || false returns false.
+          <br>
+          <b>Logical NOT (!):</b>
+
+          Reverses the Boolean value of its operand; if the operand is true, it returns false, and if the operand is
+          false, it returns true.
+          <br>
+          <b style="color: red;">Example:</b> !true returns false, and !false returns true.
+          <br>
+          <span style="color: blue;">
+
+            -Logical operators are often used to make decisions in conditional statements, control the flow of execution
+            in programs, and perform logical operations on Boolean values.
+          </span>
+          <br>
+          <hr>
+          <b style="font-size: 1.2rem;">Bitwise</b>
+          <br>
+
+          Bitwise operators in JavaScript manipulate the binary representation of numbers at the bit level. Here are the
+          bitwise operators along with their explanations:
+          <br>
+          (++,--)
+          <br>
+          <b>Bitwise AND (&):</b>
+
+          Performs a bitwise AND operation on each pair of corresponding bits. If both bits are 1, the result is 1;
+          otherwise, it's 0.
+          <br>
+          <b style="color: red;">Example:</b> 5 & 3 returns 1 because the binary representation of 5 (101) AND 3 (011)
+          yields 001.
+          <br>
+          <b>Bitwise OR (|):</b>
+
+          Performs a bitwise OR operation on each pair of corresponding bits. If at least one bit is 1, the result is 1;
+          otherwise, it's 0.
+          <br>
+          <b style="color: red;">Example:</b> 5 | 3 returns 7 because the binary representation of 5 (101) OR 3 (011)
+          yields 111.
+          <br>
+          <b>Bitwise XOR (^):</b>
+
+          Performs a bitwise XOR (exclusive OR) operation on each pair of corresponding bits. If the bits are different,
+          the result is 1; otherwise, it's 0.
+          <br>
+          <b style="color: red;">Example:</b> 5 ^ 3 returns 6 because the binary representation of 5 (101) XOR 3 (011)
+          yields 110.
+          <br>
+          <b>Bitwise NOT (~):</b>
+
+          Performs a bitwise NOT operation, which inverts all the bits of its operand. It returns the two's complement
+          of the number.
+          <br>
+          <b style="color: red;">Example:</b> ~5 returns -6 because the bitwise NOT of 5 (101) yields
+          11111111111111111111111111111010, which is -6 in two's complement representation.
+          <br>
+          <b>Left Shift (&lt;&lt;):</b>
+
+          Shifts the bits of the left operand to the left by a specified number of positions, filling in zeros from the
+          right.
+          <br>
+          <b style="color: red;">Example:</b> 5 &lt;&lt; 1 returns 10 because the binary representation of 5 (101)
+          shifted left by 1 position yields 1010, which is 10 in decimal.
+          <br>
+          <b>Right Shift (>>):</b>
+
+          Shifts the bits of the left operand to the right by a specified number of positions, filling in the leftmost
+          bits with the sign bit (0 for positive numbers and 1 for negative numbers).
+          <br>
+          <b style="color: red;">Example:</b> 5 >> 1 returns 2 because the binary representation of 5 (101) shifted
+          right by 1 position yields 10, which is 2 in decimal.
+          <br>
+          <b>Unsigned Right Shift (>>>):</b>
+
+          Similar to the right shift operator (>>), but it always fills in the leftmost bits with zeros, regardless of
+          the sign of the number.
+          <br>
+          <b style="color: red;">Example:</b> 5 >>> 1 returns 2 because the binary representation of 5 (101) shifted
+          right by 1 position yields 10, which is 2 in decimal.
+          <br>
+          <span style="color: blue;">
+            - Bitwise operators are typically used in low-level programming, such as optimizing algorithms, working with
+            binary data, and implementing certain bitwise operations.
+          </span>
+          <br>
+          <hr>
+          <b style="font-size: 1.2rem;">Ternary</b>
+          <br>
+          - The ternary operator, also known as the <b>conditional operator,</b> is a concise way to write conditional
+          statements in JavaScript. <b>It takes three operands and evaluates</b> a condition, returning one of two
+          expressions based on whether the condition is true or false. Here's the syntax and an example:
+          <br>
+          <b>Syntax:</b>condition ? expression1 : expression2
+          <br>
+          <b>Explanation:</b>
+          <br>
+          - If the condition evaluates to true, the expression before the colon (:) is returned. <br>
+          - If the condition evaluates to false, the expression after the colon (:) is returned. <br>
+          <b style="color: red;">Example:</b>
+          let age = 20; <br>
+          let message = (age >= 18) ? 'You are an adult' : 'You are a minor'; <br>
+          console.log(message); // Output: 'You are an adult' <br>
+          <b>In this example:</b>
+          <br>
+          - If the condition age >= 18 is true, the expression 'You are an adult' is returned. <br>
+          - If the condition is false, the expression 'You are a minor' is returned. <br>
+          <span style="color: blue;">
+
+            Ternary operators are often used for inline conditional assignments, making code more concise and readable.
+            However, they should be used judiciously to maintain code clarity.
+          </span>
+          <br>
+          <hr>
+          <b style="font-size: 1.2rem;"> Unary</b>
+          <br>
+          - Unary operators in JavaScript work on a single operand and perform various operations. <b>Let’s</b> explore
+          them with simple examples:
+          <br>
+          <b>Unary Plus (+) Operator:</b>
+          The unary plus converts an operand into a number, if possible. It’s commonly used to ensure numerical
+          operations on variables that may contain numeric strings.
+          <br>
+          <b style="color: red;">Example:</b>
+          <br>
+          let str1 = "12"; <br>
+          let num = +str1; // Converts the string "12" to the number 12 <br>
+          console.log(num); // Output: 12 <br>
+
+          <b>Unary Minus (-) Operator:</b>
+          The unary negation (-) operator converts its operand to a negative number if it isn’t already negative.
+          <br>
+          <b style="color: red;">Example:</b>
+          <br>
+          let str2 = -"Geeks"; // Negates the value (results in NaN) <br>
+          console.log(str2); // Output: NaN <br>
+          <b>Unary Increment (++) Operator:</b>
+          Adds 1 to its operand’s value and evaluates to the updated value. Can be used as a postfix or prefix operator.
+          <br>
+          <b style="color: red;">Example (postfix)</b>
+          <br>
+          let num = 12; <br>
+          let numPostfix = num++; // First uses num, then increments it <br>
+          console.log(numPostfix); // Output: 12 <br>
+          console.log(num); // Output: 13 <br>
+          <b>Unary Decrement (--) Operator:</b>
+          Subtracts 1 from its operand’s value and evaluates to the updated value. Also used as a postfix or prefix
+          operator.
+          <br>
+          <b style="color: red;">Example (prefix)</b>
+          <br>
+          let num1 = 10; <br>
+          let num1Prefix = ++num1; // Increments num1 first, then uses the updated value <br>
+          console.log(num1Prefix); // Output: 11 <br>
+          console.log(num1); // Output: 11 <br>
+          <span style="color: blue;">
+            Remember, unary operators are like little tools that help you manipulate values in JavaScript!
+          </span>
+
+          <!-- --p-- -->
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <br><br><br><br>
+
+</body>
+
+</html>
